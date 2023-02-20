@@ -1,9 +1,9 @@
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
 import Home from "../src/pages/index";
+import { renderWithWrapper } from "../jest/setupTests";
 
 describe("Home", () => {
   it("renders <Home /> component", () => {
-    render(<Home />);
+    renderWithWrapper(<Home />);
   });
 });
