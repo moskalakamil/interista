@@ -13,16 +13,22 @@ const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background: black;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-inline: 8vw;
+  width: 100%;
   align-items: center;
   margin-top: 2vh;
+  z-index: 1024;
+
+  @media (min-width: 1024px) {
+    padding-inline: 8vw;
+  }
 
   img {
     width: 80px;
+    margin-inline: 2vw;
   }
 `;
 

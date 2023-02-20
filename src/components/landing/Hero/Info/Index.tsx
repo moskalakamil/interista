@@ -66,6 +66,10 @@ const Container = styled.div`
       margin-top: 20px;
       font-size: 18px;
     }
+
+    button:hover {
+      cursor: pointer;
+    }
   }
 `;
 export default Info;

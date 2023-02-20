@@ -31,9 +31,11 @@ const StyledNav = styled.nav`
     margin-inline: 3vw;
 
     & > a {
-      font-size: 22px;
+      font-size: 24px;
       color: white;
       text-decoration: none;
+      font-family: "Bebas Neue";
+      letter-spacing: 2px;
     }
   }
 `;
