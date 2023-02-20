@@ -1,1 +1,5 @@
-export default {};
+export default {
+  colors: {
+    navyBlue: "#072350",
+  },
+};
