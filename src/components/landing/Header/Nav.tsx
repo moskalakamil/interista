@@ -24,6 +24,18 @@ const Nav = ({ links }: Props) => {
   );
 };
 
-export default Nav;
+const StyledNav = styled.nav`
+  ul li {
+    list-style: none;
+    display: inline;
+    margin-inline: 3vw;
 
-const StyledNav = styled.nav``;
+    & > a {
+      font-size: 22px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+`;
+
+export default Nav;
