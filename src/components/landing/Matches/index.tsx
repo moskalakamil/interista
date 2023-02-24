@@ -26,7 +26,7 @@ const Matches = () => {
   return (
     <section>
       {matches.map(({ host, guest, date, hour }) => (
-        <Match host={host} guest={guest} date={date} hour={hour} />
+        <Match key={date} host={host} guest={guest} date={date} hour={hour} />
       ))}
     </section>
   );

@@ -23,6 +23,7 @@ const StyledDiv = styled.div`
 
   p {
     text-align: center;
+    font-weight: 100;
   }
   p:first-child {
     position: relative;
