@@ -1,3 +1,4 @@
+import Matches from "@/components/landing/Matches";
 import Head from "next/head";
 import Header from "@/components/landing/Header/Index";
 import Hero from "@/components/landing/Hero/Index";
@@ -22,11 +23,11 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+
       <main>
         <Header />
-      </main>
-      <main>
         <Hero articleName="Lorem-ipsum-rata-tata-g" />
+        <Matches />
       </main>
     </>
   );
