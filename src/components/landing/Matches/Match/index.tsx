@@ -25,6 +25,8 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 15%;
+  width: 80%;
+  padding: 2% 5%;
+  border-bottom: 1px solid #c8c8c8;
+  margin: 0 10%;
 `;
