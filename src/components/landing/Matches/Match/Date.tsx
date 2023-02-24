@@ -22,20 +22,21 @@ const StyledDiv = styled.div`
   justify-content: center;
 
   p {
+    color: #6d6d6d;
     text-align: center;
     font-weight: 100;
   }
   p:first-child {
     position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 10px;
     &::after {
       content: "";
       position: absolute;
-      width: 120%;
-      height: 2px;
-      background-color: black;
-      bottom: 0;
-      left: -12%;
+      width: 130%;
+      height: 1px;
+      background-color: #6d6d6d;
+      bottom: -5px;
+      left: -17%;
     }
   }
 `;
