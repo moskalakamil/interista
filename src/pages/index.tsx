@@ -1,3 +1,4 @@
+import Articles from "./../components/landing/Articles/Index";
 import Matches from "@/components/landing/Matches";
 import Head from "next/head";
 import Header from "@/components/landing/Header/Index";
@@ -13,13 +14,10 @@ export default function Home() {
         <link rel="icon" href="/logo_black.svg" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -27,6 +25,7 @@ export default function Home() {
       <main>
         <Header />
         <Hero articleName="Lorem-ipsum-rata-tata-g" />
+        <Articles />
         <Matches />
       </main>
     </>

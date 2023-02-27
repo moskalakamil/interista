@@ -20,7 +20,7 @@ const HeroStyled = styled.div<Props>`
   height: 100vh;
   align-items: center;
   color: white;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", sans-serif;
 
   ::before {
     content: "";
