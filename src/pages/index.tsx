@@ -3,6 +3,7 @@ import Matches from "@/components/landing/Matches";
 import Head from "next/head";
 import Header from "@/components/landing/Header/Index";
 import Hero from "@/components/landing/Hero/Index";
+import Footer from "@/components/common/Footer/Index";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <main>
         <Header />
         <Hero articleName="Lorem-ipsum-rata-tata-g" />
+        <Footer />
         <Articles />
         <Matches />
       </main>
