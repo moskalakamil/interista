@@ -3,18 +3,24 @@ import Info from "./Info/Index";
 
 interface Props {
   articleName: string;
+  articleId: number;
 }
 
-const Hero = ({ articleName }: Props) => {
+interface StyledProps {
+  articleId: number;
+}
+
+const Hero = ({ articleName, articleId }: Props) => {
   return (
-    <HeroStyled articleName={articleName}>
+    <HeroStyled articleId={articleId}>
       <Info articleName={articleName} />
     </HeroStyled>
   );
 };
 
-const HeroStyled = styled.div<Props>`
-  background: url(${({ articleName }) => `/articles/${articleName}/mainImage.png`});
+const HeroStyled = styled.div<StyledProps>`
+  background: url(${({ articleId }) => `/articles/${articleId}/mainImage.jpeg`});
+  background-size: cover;
   display: flex;
   width: 100%;
   height: 100vh;

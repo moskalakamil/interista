@@ -32,7 +32,7 @@ export default function Home() {
 
       <main>
         <Header />
-        <Hero articleName="Lorem-ipsum-rata-tata-g" />
+        <Hero articleName="Lorem ipsum rata tata  sg" articleId={2} />
         <Articles />
         <Matches />
         <Footer />
