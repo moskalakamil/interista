@@ -25,8 +25,14 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  padding: 2% 5%;
+  width: 96%;
+  padding: 2%;
   border-bottom: 1px solid #c8c8c8;
-  margin: 0 10%;
+  margin: 0 2%;
+
+  @media (min-width: 768px) {
+    width: 80%;
+    margin: 0 10%;
+    padding: 2%, 5%;
+  }
 `;

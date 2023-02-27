@@ -9,23 +9,25 @@ const Team = ({ host, guest }: IProps) => {
   return (
     <StyledDiv>
       {guest && (
-        <Image
-          src="/logo_match.png"
-          alt=""
-          width={80}
-          height={80}
-          style={{ padding: "3%" }}
-        ></Image>
+        <div>
+          <Image
+            src="/logo_match.png"
+            alt=""
+            fill
+            style={{ padding: "3%" }}
+          ></Image>
+        </div>
       )}
       <p>{host || guest}</p>
       {host && (
-        <Image
-          src="/logo_match.png"
-          alt=""
-          width={80}
-          height={80}
-          style={{ padding: "3%" }}
-        ></Image>
+        <div>
+          <Image
+            src="/logo_match.png"
+            alt=""
+            fill
+            style={{ padding: "3%" }}
+          ></Image>
+        </div>
       )}
       {/* <img src="/logo_black.svg" alt="" /> */}
     </StyledDiv>
@@ -37,7 +39,26 @@ export default Team;
 const StyledDiv = styled.div`
   display: flex;
   align-items: center;
-  p {
-    font-size: 40px;
+
+  & > div {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    @media (min-width: 960px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  & > p {
+    font-size: 20px;
+
+    @media (min-width: 960px) {
+      font-size: 30px;
+    }
+    @media (min-width: 1100px) {
+      font-size: 40px;
+    }
   }
 `;
