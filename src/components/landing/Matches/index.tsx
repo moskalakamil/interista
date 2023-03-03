@@ -1,3 +1,4 @@
+import SectionTitle from "../../../common/SectionTitle";
 import React from "react";
 import Match from "./Match";
 
@@ -25,6 +26,7 @@ const Matches = () => {
 
   return (
     <section>
+      <SectionTitle>Mecze</SectionTitle>
       {matches.map(({ host, guest, date, hour }) => (
         <Match key={date} host={host} guest={guest} date={date} hour={hour} />
       ))}
