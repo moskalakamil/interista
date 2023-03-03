@@ -28,7 +28,7 @@ const StyledDiv = styled.div`
   width: 96%;
   padding: 2%;
   border-bottom: 1px solid #c8c8c8;
-  margin: 0 2%;
+  margin: 10 2%;
 
   @media (min-width: 768px) {
     width: 80%;

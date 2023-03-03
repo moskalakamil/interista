@@ -49,6 +49,8 @@ const StyledCategory = styled.div`
     font-size: 32px;
     padding-inline: 10vw;
     padding-left: 0px;
+    font-family: "Bebas Neue", sans-serif;
+
   }
 
   ul {
@@ -62,6 +64,7 @@ const StyledCategory = styled.div`
       text-decoration: none;
       font-size: 24px;
       color: white;
+      font-family: "Bebas Neue";
     }
   }
 `;
