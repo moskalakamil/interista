@@ -32,7 +32,6 @@ const StyledNav = styled.nav`
 
     & > a {
       font-size: 24px;
-      color: white;
       text-decoration: none;
       font-family: "Bebas Neue";
       letter-spacing: 2px;

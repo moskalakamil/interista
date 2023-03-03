@@ -13,13 +13,13 @@ const Matches = () => {
     {
       host: "Inter Mediolan",
       guest: "Tempo Rzeszotary",
-      date: "20.10.2023",
+      date: "22.10.2023",
       hour: "20:00",
     },
     {
       host: "Inter Mediolan",
       guest: "Tempo Rzeszotary",
-      date: "20.10.2023",
+      date: "26.10.2023",
       hour: "20:00",
     },
   ];
