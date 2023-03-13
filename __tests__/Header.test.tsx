@@ -1,19 +1,31 @@
 import "@testing-library/jest-dom";
+import "jest-styled-components";
+
 import { renderWithWrapper } from "../jest/setupTests";
+import { fireEvent } from "@testing-library/react";
+
 import Header from "@/components/landing/Header/Index";
 
-describe("Home", () => {
-  const header = renderWithWrapper(<Header />).getByTestId("header");
-
-  it("Home -> change height after scroll", () => {
-    const padding = window.scrollY > 0 ? "0vh" : "2vh";
-
-    expect(header.style.paddingTop === padding);
+describe("Header", () => {
+  it("renders <Header /> component", () => {
+    renderWithWrapper(<Header />);
   });
 
-  it("Home -> change background on scroll", () => {
+  it("Header -> change height after scroll", () => {
+    fireEvent.scroll(window, { target: { scrollY } });
+
+    const header = renderWithWrapper(<Header />).getByTestId("header");
+    const padding = window.scrollY > 0 ? "0vh" : "2vh";
+
+    expect(header).toHaveStyleRule("padding-top", padding);
+  });
+
+  it("Header -> change background on scroll", () => {
+    fireEvent.scroll(window, { target: { scrollY } });
+
+    const header = renderWithWrapper(<Header />).getByTestId("header");
     const color = window.scrollY > 0 ? "white" : "transparent";
 
-    expect(header.style.background === color);
+    expect(header).toHaveStyleRule("background", color);
   });
 });
