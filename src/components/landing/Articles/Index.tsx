@@ -22,7 +22,7 @@ const dummyArticles = [
     id: 3,
   },
   {
-    name: "Sędzia ewidętnie się pomylił",
+    name: "Sędzia ewidentnie się pomylił",
     time: "10 lipca 2020",
     tag: "Gorący piłkazyk",
     id: 4,
@@ -34,7 +34,7 @@ const dummyArticles = [
     id: 5,
   },
   {
-    name: "Wygrana na swoim terenie.",
+    name: "Wygrana na swoim terenie.ć",
     time: "10 lipca 2020",
     tag: "Gorący piłkazyk",
     id: 6,
@@ -66,3 +66,4 @@ const Container = styled.div`
 `;
 
 export default Articles;
+
