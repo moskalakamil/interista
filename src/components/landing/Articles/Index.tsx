@@ -5,11 +5,13 @@ import Article from "./Article";
 const dummyArticles = [
   {
     name: "Niesamowity sukces drużyny!",
+    name: "Niesamowity sukces drużyny!",
     time: "15 lipca 2020",
     tag: "Gorący piłkazyk",
     id: 1,
   },
   {
+    name: "Niestety porażka",
     name: "Niestety porażka",
     time: "10 czerwca 2022",
     tag: "Gorący piłkazyk",
@@ -17,17 +19,20 @@ const dummyArticles = [
   },
   {
     name: "Piękny debiut młodego zawodnika",
+    name: "Piękny debiut młodego zawodnika",
     time: "10 lipca 2020",
     tag: "Gorący piłkazyk",
     id: 3,
   },
   {
     name: "Sędzia ewidentnie się pomylił",
+    name: "Sędzia ewidętnie się pomylił",
     time: "10 lipca 2020",
     tag: "Gorący piłkazyk",
     id: 4,
   },
   {
+    name: "Kibice przygotowali piękną oprawę",
     name: "Kibice przygotowali piękną oprawę",
     time: "10 lipca 2020",
     tag: "Gorący piłkazyk",
@@ -35,6 +40,7 @@ const dummyArticles = [
   },
   {
     name: "Wygrana na swoim terenie.ć",
+    name: "Wygrana na swoim terenie.",
     time: "10 lipca 2020",
     tag: "Gorący piłkazyk",
     id: 6,
@@ -66,4 +72,3 @@ const Container = styled.div`
 `;
 
 export default Articles;
-

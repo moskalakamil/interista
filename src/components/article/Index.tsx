@@ -1,6 +1,11 @@
 import React from "react";
 
-const Main = () => {
+interface IProps {
+  title: string;
+  description: string;
+}
+
+const Main = ({ title, description }: IProps) => {
   return <div>Article</div>;
 };
 
