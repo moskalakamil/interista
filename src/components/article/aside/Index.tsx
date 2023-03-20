@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Ads from "./Ads";
 import Author from "./Author";
-import LastArticles from "./LastArticles";
+import Recommended from "./Recommended/Index";
+
 interface Props {
   author: {
     id: string;
@@ -10,12 +11,35 @@ interface Props {
     email: string;
   };
 }
+
+const articles = [
+  {
+    title: "Article Title no 1 - experimental :)",
+    description: "This is the best description even for the article no 1",
+  },
+  {
+    title: "Article Title no 2 - experimental :)",
+    description: "This is the best description even for the article no 2",
+  },
+  {
+    title: "Article Title no 3 - experimental :)",
+    description: "This is the best description even for the article no 3",
+  },
+  {
+    title: "Article Title no 4 - experimental :)",
+    description: "This is the best description even for the article no 4",
+  },
+  {
+    title: "Article Title no 5 - experimental :)",
+    description: "This is the best description even for the article no 5",
+  },
+];
+
 const Aside = ({ author }: Props) => {
-  console.log(author);
   return (
     <DivStyled>
       <Author author={author} />
-      <LastArticles />
+      <Recommended articles={articles} />
       <Ads />
     </DivStyled>
   );
