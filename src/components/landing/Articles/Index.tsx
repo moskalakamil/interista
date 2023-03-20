@@ -1,59 +1,26 @@
 import SectionTitle from "../../../common/SectionTitle";
 import styled from "styled-components";
 import Article from "./Article";
+import { useEffect } from "react";
+import { Post } from "@/types/posts";
 
-const dummyArticles = [
-  {
-    name: "Niesamowity sukces drużyny!",
-    name: "Niesamowity sukces drużyny!",
-    time: "15 lipca 2020",
-    tag: "Gorący piłkazyk",
-    id: 1,
-  },
-  {
-    name: "Niestety porażka",
-    name: "Niestety porażka",
-    time: "10 czerwca 2022",
-    tag: "Gorący piłkazyk",
-    id: 2,
-  },
-  {
-    name: "Piękny debiut młodego zawodnika",
-    name: "Piękny debiut młodego zawodnika",
-    time: "10 lipca 2020",
-    tag: "Gorący piłkazyk",
-    id: 3,
-  },
-  {
-    name: "Sędzia ewidentnie się pomylił",
-    name: "Sędzia ewidętnie się pomylił",
-    time: "10 lipca 2020",
-    tag: "Gorący piłkazyk",
-    id: 4,
-  },
-  {
-    name: "Kibice przygotowali piękną oprawę",
-    name: "Kibice przygotowali piękną oprawę",
-    time: "10 lipca 2020",
-    tag: "Gorący piłkazyk",
-    id: 5,
-  },
-  {
-    name: "Wygrana na swoim terenie.ć",
-    name: "Wygrana na swoim terenie.",
-    time: "10 lipca 2020",
-    tag: "Gorący piłkazyk",
-    id: 6,
-  },
-];
+interface Props {
+  articles: Post[];
+}
 
-const Articles = () => {
+const Articles = ({ articles }: Props) => {
   return (
     <Container>
       <SectionTitle>Artykuły</SectionTitle>
       <ul>
-        {dummyArticles.map(({ name, time, tag, id }) => (
-          <Article key={id} name={name} time={time} tag={tag} id={id} />
+        {articles.map((article) => (
+          <Article
+            name={article.title}
+            time={article.createdAt.toString()}
+            tag="Gorący piłkayk"
+            id={article.id}
+            key={article.id}
+          />
         ))}
       </ul>
     </Container>

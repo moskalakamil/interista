@@ -4,13 +4,13 @@ interface Props {
   name: string;
   time: string;
   tag: string;
-  id: number;
+  id: string;
 }
 
 const Article = ({ name, time, tag, id }: Props) => {
   return (
     <Container>
-      <img src={`/articles/${id}/mainImage.jpeg`} alt="" />
+      <img src={`/articles/${id}/main.webp`} alt="" />
       <div className="additional-info">
         <p className="tag">{tag}</p>
         <p className="time">{time}</p>
