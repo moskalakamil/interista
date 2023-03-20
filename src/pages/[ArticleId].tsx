@@ -2,6 +2,7 @@ import Main from "@/components/article/Index";
 import Aside from "@/components/article/aside/Index";
 import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
+import styled from "styled-components";
 
 interface IProps {
   title: string;
@@ -15,10 +16,10 @@ interface IProps {
 
 const Article = ({ title, description, author }: IProps) => {
   return (
-    <>
+    <ContainerDivStyled>
       <Main title={title} description={description} />
-      <Aside />
-    </>
+      <Aside author={author} />
+    </ContainerDivStyled>
   );
 };
 
@@ -54,3 +55,7 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
+const ContainerDivStyled = styled.div`
+  display: flex;
+`;
