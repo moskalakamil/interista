@@ -3,6 +3,7 @@ import { User } from "./user";
 export type Author = Omit<User, "posts" | "createdAt" | "updatedAt">;
 
 export type Post = {
+  id: string;
   authorId: string;
   title: string;
   content: string;
