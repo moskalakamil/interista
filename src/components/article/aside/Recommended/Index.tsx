@@ -24,8 +24,7 @@ const Recommended = ({ articles }: Props) => {
 };
 
 const StyledRecommended = styled.div`
-  margin-inline: 32px;
-  padding-inline: 64px;
+  margin-right: 32px;
 
   h2 {
     text-align: center;
@@ -33,6 +32,7 @@ const StyledRecommended = styled.div`
     border-bottom: 1px solid black;
     height: 42px;
     margin-bottom: 24px;
+    margin-top: 30px;
   }
 `;
 

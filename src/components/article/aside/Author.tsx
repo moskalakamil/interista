@@ -26,14 +26,12 @@ export default Author;
 
 const StyledCategory = styled.div`
   display: flex;
-  float: right;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 30px;
-  margin-right: 55px;
   align-items: center;
+  margin-top: 25px;
 
   img {
     width: 84px;
