@@ -12,11 +12,7 @@ const Recommended = ({ articles }: Props) => {
       <h2>Zobacz więcej</h2>
       <ul>
         {articles.map(({ title, description }, index) => (
-          <RecommendedArticle
-            key={index}
-            title={title}
-            description={description}
-          />
+          <RecommendedArticle key={index} title={title} description={description} />
         ))}
       </ul>
     </StyledRecommended>
@@ -24,15 +20,18 @@ const Recommended = ({ articles }: Props) => {
 };
 
 const StyledRecommended = styled.div`
-  margin-right: 32px;
-
   h2 {
     text-align: center;
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
     height: 42px;
+    font-size: 20px;
     margin-bottom: 24px;
     margin-top: 30px;
+  }
+
+  ul {
+    padding-inline: 40px;
   }
 `;
 
