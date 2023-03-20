@@ -18,8 +18,16 @@ const StyledRecommendedArticle = styled.li`
   padding-left: 24px;
   line-height: 1.5;
 
+  h3 {
+    font-size: 20px;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   p {
-    color: #9f9f9f;
+    color: ${({ theme }) => theme.colors.gray};
   }
 
   ::before {

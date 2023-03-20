@@ -25,26 +25,35 @@ const Author = ({ author }: Props) => {
 export default Author;
 
 const StyledCategory = styled.div`
+  width: 100%;
   display: flex;
-  float: right;
-  font-family: "Inter";
   font-style: normal;
-  font-weight: 700;
   font-size: 12px;
   line-height: 30px;
-  margin-right: 55px;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 45px;
+  padding-inline: 40px;
 
   img {
-    width: 84px;
-    height: 85px;
+    width: 70px;
+    height: 70px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 85px;
-    margin-right: 20px;
   }
 
   div {
     display: flex;
     flex-direction: column;
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      color: ${({ theme }) => theme.colors.gray};
+    }
   }
 `;
