@@ -17,7 +17,7 @@ const Article = ({ title, description, author }: IProps) => {
   return (
     <>
       <Main title={title} description={description} />
-      <Aside />
+      <Aside author={author} />
     </>
   );
 };
