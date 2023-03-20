@@ -11,8 +11,12 @@ const Recommended = ({ articles }: Props) => {
     <StyledRecommended>
       <h2>Zobacz więcej</h2>
       <ul>
-        {articles.map(({ title, description }) => (
-          <RecommendedArticle title={title} description={description} />
+        {articles.map(({ title, description }, index) => (
+          <RecommendedArticle
+            key={index}
+            title={title}
+            description={description}
+          />
         ))}
       </ul>
     </StyledRecommended>
