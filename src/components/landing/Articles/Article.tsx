@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface Props {
   name: string;
-  time: string;
+  time: Date;
   tag: string;
   id: string;
 }
@@ -13,7 +13,7 @@ const Article = ({ name, time, tag, id }: Props) => {
       <img src={`/articles/${id}/main.webp`} alt="" />
       <div className="additional-info">
         <p className="tag">{tag}</p>
-        <p className="time">{time}</p>
+        <p className="time">{JSON.stringify(time)}</p>
       </div>
       <h1>{name}</h1>
     </Container>

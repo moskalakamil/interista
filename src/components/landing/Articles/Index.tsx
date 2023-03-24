@@ -11,6 +11,8 @@ interface Props {
 const Articles = ({ articles }: Props) => {
   const { t } = useTranslation("common");
 
+  console.log(articles);
+
   return (
     <Container>
       <SectionTitle>{t("articles")}</SectionTitle>
@@ -18,7 +20,7 @@ const Articles = ({ articles }: Props) => {
         {articles.map((article) => (
           <Article
             name={article.title}
-            time={article.createdAt.toString()}
+            time={new Date(article.createdAt)}
             tag="Gorący piłkayk"
             id={article.id}
             key={article.id}
