@@ -13,7 +13,7 @@ const Main = ({ title, description }: IProps) => {
       <Header />
       <h1>{title}</h1>
       <img src="/footer.png" />
-      <p className="header">Naglowek</p>
+      {/* <p className="header">Naglowek</p> */}
       <p>{description}</p>
     </MainStyled>
   );

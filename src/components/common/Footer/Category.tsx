@@ -50,7 +50,6 @@ const StyledCategory = styled.div`
     padding-inline: 10vw;
     padding-left: 0px;
     font-family: "Bebas Neue", sans-serif;
-
   }
 
   ul {
