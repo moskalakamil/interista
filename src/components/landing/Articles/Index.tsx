@@ -1,17 +1,19 @@
 import SectionTitle from "../../../common/SectionTitle";
 import styled from "styled-components";
 import Article from "./Article";
-import { useEffect } from "react";
 import { Post } from "@/types/posts";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   articles: Post[];
 }
 
 const Articles = ({ articles }: Props) => {
+  const { t } = useTranslation("common");
+
   return (
     <Container>
-      <SectionTitle>Artykuły</SectionTitle>
+      <SectionTitle>{t("articles")}</SectionTitle>
       <ul>
         {articles.map((article) => (
           <Article

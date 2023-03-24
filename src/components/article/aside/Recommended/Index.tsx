@@ -1,4 +1,5 @@
 import ArticleItem from "@/types/ArticleItem";
+import { useTranslation } from "next-i18next";
 import styled from "styled-components";
 import RecommendedArticle from "./RecommendedArticle";
 
@@ -7,9 +8,11 @@ interface Props {
 }
 
 const Recommended = ({ articles }: Props) => {
+  const { t } = useTranslation("common");
+
   return (
     <StyledRecommended>
-      <h2>Zobacz więcej</h2>
+      <h2>{t("seeMore")}</h2>
       <ul>
         {articles.map(({ title, description }, index) => (
           <RecommendedArticle key={index} title={title} description={description} />

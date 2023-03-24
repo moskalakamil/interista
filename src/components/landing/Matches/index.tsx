@@ -1,8 +1,11 @@
 import SectionTitle from "../../../common/SectionTitle";
 import React from "react";
 import Match from "./Match";
+import { useTranslation } from "next-i18next";
 
 const Matches = () => {
+  const { t } = useTranslation("common");
+
   const matches = [
     {
       host: "Inter Mediolan",
@@ -26,7 +29,7 @@ const Matches = () => {
 
   return (
     <section>
-      <SectionTitle>Mecze</SectionTitle>
+      <SectionTitle>{t("matches")}</SectionTitle>
       {matches.map(({ host, guest, date, hour }) => (
         <Match key={date} host={host} guest={guest} date={date} hour={hour} />
       ))}

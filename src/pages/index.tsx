@@ -5,6 +5,7 @@ import Header from "@/components/landing/Header/Index";
 import Hero from "@/components/landing/Hero/Index";
 import Footer from "@/components/common/Footer/Index";
 import { Post } from "@/types/posts";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getStaticPaths } from "./[ArticleId]";
 import { getPosts } from "./api/post/getPosts";
 
@@ -48,9 +49,10 @@ export default function Home({ articles }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }: any) => {
   const articles = await getPosts();
 
-  console.log(articles);
-  return { props: { articles } };
+  return {
+    props: { articles, ...(await serverSideTranslations(locale, ["common"])) },
+  };
 };
