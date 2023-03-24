@@ -8,8 +8,8 @@ export type Post = {
   title: string;
   content: string;
   published: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
   author: Author;
 };
 

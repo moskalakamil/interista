@@ -1,19 +1,23 @@
+import { parseDate } from "@/utils/parseDate";
 import styled from "styled-components";
 
 interface Props {
   name: string;
-  time: Date;
+  date: string;
   tag: string;
   id: string;
 }
 
-const Article = ({ name, time, tag, id }: Props) => {
+const Article = ({ name, date, tag, id }: Props) => {
   return (
     <Container>
-      <img src={`/articles/${id}/main.webp`} alt="" />
+      <img
+        src={`/articles/104e2a0a-9760-49ae-9848-c371fe2fbb6e/main.webp`}
+        alt=""
+      />
       <div className="additional-info">
         <p className="tag">{tag}</p>
-        <p className="time">{JSON.stringify(time)}</p>
+        <p className="time">{date}</p>
       </div>
       <h1>{name}</h1>
     </Container>

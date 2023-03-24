@@ -3,6 +3,7 @@ import prisma from "./../../../../lib/prisma";
 import { Response } from "@/types/Response";
 import { CreateUserBody } from "@/types/user";
 import { ErrorsMessages, SuccessMessages } from "../constants";
+import dayjs from "dayjs";
 
 interface ExtendedNextApiRequest extends NextApiRequest {
   body: CreateUserBody;
@@ -24,6 +25,8 @@ export default async function handler(
       data: {
         name,
         email,
+        createdAt: dayjs(new Date()).format("YYYY-MM-DD HH:mm:ss"),
+        updatedAt: dayjs(new Date()).format("YYYY-MM-DD HH:mm:ss"),
       },
     });
 
