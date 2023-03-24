@@ -5,6 +5,9 @@ import Header from "@/components/landing/Header/Index";
 import Hero from "@/components/landing/Hero/Index";
 import Footer from "@/components/common/Footer/Index";
 import { Post } from "@/types/posts";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { getStaticPaths } from "./[ArticleId]";
+import { getPosts } from "./api/post/getPosts";
 
 interface Props {
   articles: Post[];
@@ -20,8 +23,15 @@ export default function Home({ articles }: Props) {
         <link rel="icon" href="/logo_black.svg" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
@@ -39,10 +49,10 @@ export default function Home({ articles }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/post/getPosts");
-  console.log(res);
-  const articles = await res.json();
+export const getStaticProps = async ({ locale }: any) => {
+  const articles = await getPosts();
 
-  return { props: { articles } };
+  return {
+    props: { articles, ...(await serverSideTranslations(locale, ["common"])) },
+  };
 };
