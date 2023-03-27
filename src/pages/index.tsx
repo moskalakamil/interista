@@ -1,7 +1,7 @@
 import Articles from "./../components/landing/Articles/Index";
 import Matches from "@/components/landing/Matches";
 import Head from "next/head";
-import Header from "@/components/landing/Header/Index";
+import Header from "@/components/common/Header/Index";
 import Hero from "@/components/landing/Hero/Index";
 import Footer from "@/components/common/Footer/Index";
 import { Post } from "@/types/posts";
