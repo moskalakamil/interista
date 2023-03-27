@@ -31,6 +31,7 @@ export default async function handler(
         title,
         content,
         published,
+        updatedAt: new Date().toString(),
       },
     });
 

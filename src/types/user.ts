@@ -2,8 +2,8 @@ export type User = {
   id: string;
   name: string;
   email: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type CreateUserBody = Omit<

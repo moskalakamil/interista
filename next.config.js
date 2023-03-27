@@ -11,6 +11,4 @@ const nextConfig = {
   i18n,
 };
 
-const { withSuperjson } = require("next-superjson");
-
-module.exports = withSuperjson()(nextConfig);
+module.exports = nextConfig;

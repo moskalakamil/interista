@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Unit tests
-        run: yarn test
+        run: npx prisma generate && yarn test
 
 
         

@@ -3,6 +3,7 @@ import prisma from "./../../../../lib/prisma";
 import { CreatePostBody } from "../../../types/posts";
 import { Response } from "../../../types/Response";
 import { ErrorsMessages, SuccessMessages } from "../constants";
+import dayjs from "dayjs";
 
 interface ExtendedNextApiRequest extends NextApiRequest {
   body: CreatePostBody;
@@ -30,6 +31,8 @@ export default async function handler(
             id: authorId,
           },
         },
+        createdAt: dayjs(new Date()).format("YYYY-MM-DD HH:mm:ss"),
+        updatedAt: dayjs(new Date()).format("YYYY-MM-DD HH:mm:ss"),
       },
     });
 

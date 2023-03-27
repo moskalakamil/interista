@@ -18,7 +18,7 @@ const Articles = ({ articles }: Props) => {
         {articles.map((article) => (
           <Article
             name={article.title}
-            time={article.createdAt.toString()}
+            date={article.createdAt}
             tag="Gorący piłkayk"
             id={article.id}
             key={article.id}
