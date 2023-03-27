@@ -4,7 +4,7 @@ import "jest-styled-components";
 import { renderWithWrapper } from "../jest/setupTests";
 import { fireEvent } from "@testing-library/react";
 
-import Header from "@/components/landing/Header/Index";
+import Header from "@/components/common/Header/Index";
 
 describe("Header", () => {
   it("renders <Header /> component", () => {
