@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { links } from "./links";
@@ -19,7 +20,13 @@ const Header = () => {
   return (
     <StyledHeader data-testid="header" isOnTop={isOnTop}>
       <Nav links={links} />
-      <img src={`/logo_${isOnTop ? "white" : "black"}.svg`} alt="Interista" />
+      <Image
+        className="image"
+        src={`/logo_${isOnTop ? "white" : "black"}.svg`}
+        alt="Interista"
+        width={80}
+        height={80}
+      />
       <Nav links={links} />
     </StyledHeader>
   );
@@ -47,11 +54,6 @@ const StyledHeader = styled.header<StyledHeaderProps>`
 
   @media (min-width: 1024px) {
     padding-inline: 8vw;
-  }
-
-  img {
-    width: 80px;
-    margin-inline: 2vw;
   }
 `;
 
