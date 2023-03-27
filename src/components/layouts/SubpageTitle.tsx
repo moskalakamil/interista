@@ -24,7 +24,13 @@ const StyledSubpageTitle = styled.div`
     position: absolute;
     color: white;
     font-family: "Bebas Neue";
-    letter-spacing: 0.5vw;
+    letter-spacing: 0.32em;
+    margin-left: 50vw;
+    margin-top: 25vh;
+    transform: translate(-50%, -50%);
+    font-size: 82px;
+    width: 100%;
+    text-align: center;
   }
 
   ::after {
@@ -47,6 +53,7 @@ const StyledSubpageTitle = styled.div`
     margin-top: 8vh;
     width: 96vh;
     z-index: 100;
+    opacity: 0.1;
   }
 `;
 
