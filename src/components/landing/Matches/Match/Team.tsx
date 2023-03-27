@@ -14,7 +14,7 @@ const Team = ({ host, guest }: IProps) => {
             src="/logo_match.png"
             alt=""
             fill
-            style={{ padding: "15%", marginLeft:"-20px" }}
+            style={{ padding: "15%", marginLeft: "-20px" }}
           ></Image>
         </div>
       )}
@@ -25,11 +25,10 @@ const Team = ({ host, guest }: IProps) => {
             src="/logo_match.png"
             alt=""
             fill
-            style={{ padding: "15%", marginLeft:"20px"}}
+            style={{ padding: "15%", marginLeft: "20px" }}
           ></Image>
         </div>
       )}
-      {/* <img src="/logo_black.svg" alt="" /> */}
     </StyledDiv>
   );
 };
@@ -39,7 +38,6 @@ export default Team;
 const StyledDiv = styled.div`
   display: flex;
   align-items: center;
-
 
   & > div {
     position: relative;

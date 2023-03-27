@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
@@ -12,7 +13,9 @@ const Main = ({ title, description }: IProps) => {
     <MainStyled>
       <Header />
       <h1>{title}</h1>
-      <img src="/footer.png" />
+      <div className="articleImage">
+        <Image src="/footer.png" alt="article image" fill />
+      </div>
       <p className="header">Naglowek</p>
       <p>{description}</p>
     </MainStyled>
@@ -24,9 +27,10 @@ export default Main;
 const MainStyled = styled.main`
   width: calc(100% - 450px);
   margin: 0 15%;
-  & > img {
+  & > div.articleImage {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 30vw;
     max-height: 500px;
     margin: 5% 0;
     border-radius: 5px;

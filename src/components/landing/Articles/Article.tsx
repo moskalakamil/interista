@@ -1,4 +1,5 @@
 import { parseDate } from "@/utils/parseDate";
+import Image from "next/image";
 import styled from "styled-components";
 
 interface Props {
@@ -11,10 +12,13 @@ interface Props {
 const Article = ({ name, date, tag, id }: Props) => {
   return (
     <Container>
-      <img
-        src={`/articles/104e2a0a-9760-49ae-9848-c371fe2fbb6e/main.webp`}
-        alt=""
-      />
+      <div className="imageContainer">
+        <Image
+          src={`/articles/104e2a0a-9760-49ae-9848-c371fe2fbb6e/main.webp`}
+          alt=""
+          fill
+        />
+      </div>
       <div className="additional-info">
         <p className="tag">{tag}</p>
         <p className="time">{date}</p>
@@ -49,7 +53,8 @@ const Container = styled.li`
     }
   }
 
-  img {
+  div.imageContainer {
+    position: relative;
     width: 100%;
     height: 220px;
     object-fit: cover;

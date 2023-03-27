@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 
@@ -13,7 +14,13 @@ const Author = ({ author }: Props) => {
   const { id, name, email } = author;
   return (
     <StyledCategory>
-      <img src="/footer.png" alt="" />
+      <Image
+        className="profileImage"
+        src="/footer.png"
+        alt="profile"
+        width={70}
+        height={70}
+      />
       <div>
         <h1>{name}</h1>
         <p>Autor/ka</p>
@@ -35,9 +42,7 @@ const StyledCategory = styled.div`
   margin-top: 45px;
   padding-inline: 40px;
 
-  img {
-    width: 70px;
-    height: 70px;
+  .profileImage {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 85px;
   }
