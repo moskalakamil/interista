@@ -5,7 +5,6 @@ import { Response } from "@/types/Response";
 
 export const getPosts = async () => {
   const postsId = await prisma.post.findMany({
-    take: 50,
     select: {
       id: true,
     },
