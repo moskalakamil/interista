@@ -27,12 +27,16 @@ const Article = ({ title, description, author }: IProps) => {
 
 export default Article;
 export const getStaticPaths: GetStaticPaths = async ({ locales }: any) => {
+  const paths: any[] = [];
   const articlesId = await getPosts();
 
-  const paths = articlesId.map((articleId: string) => {
-    return {
-      params: { ArticleId: `${articleId}` },
-    };
+  articlesId.map((id: string) => {
+    locales.map((locale: string) => {
+      return paths.push({
+        params: { ArticleId: `${id}` },
+        locale,
+      });
+    });
   });
 
   return {
