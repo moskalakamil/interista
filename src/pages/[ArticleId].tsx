@@ -29,9 +29,9 @@ export default Article;
 export const getStaticPaths: GetStaticPaths = async ({ locales }: any) => {
   const articlesId = await getPosts();
 
-  const paths = articlesId.map((article: string) => {
+  const paths = articlesId.map((articleId: string) => {
     return {
-      params: { ArticleId: `${article}` },
+      params: { ArticleId: `${articleId}` },
     };
   });
 
