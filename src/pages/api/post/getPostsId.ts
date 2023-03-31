@@ -13,7 +13,10 @@ export const getPosts = async () => {
   return postsId.map(({ id }: { id: string }) => id);
 };
 
-export default async function handler({}: NextApiRequest, res: NextApiResponse<Post[] | Response>) {
+export default async function handler(
+  {}: NextApiRequest,
+  res: NextApiResponse<Post[] | Response>
+) {
   try {
     const posts = await getPosts();
     res.status(200).json(posts);
