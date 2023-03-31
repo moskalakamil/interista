@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 import styled from "styled-components";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { getPosts } from "./api/post/getPostsId";
 
 interface IProps {
   title: string;
@@ -25,20 +26,19 @@ const Article = ({ title, description, author }: IProps) => {
 };
 
 export default Article;
-
 export const getStaticPaths: GetStaticPaths = async ({ locales }: any) => {
-  const articles = ["1", "2"];
-
   const paths: any[] = [];
+  const articlesId = await getPosts();
 
-  articles.map((article) => {
+  articlesId.map((id: string) => {
     locales.map((locale: string) => {
       return paths.push({
-        params: { ArticleId: `${article}` },
+        params: { ArticleId: `${id}` },
         locale,
       });
     });
   });
+
   return {
     paths,
     fallback: false,
