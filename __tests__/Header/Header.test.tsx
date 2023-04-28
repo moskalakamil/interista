@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import "jest-styled-components";
 
-import { renderWithWrapper } from "../jest/setupTests";
+import { renderWithWrapper } from "../../jest/setupTests";
 import { fireEvent } from "@testing-library/react";
 
 import Header from "@/components/common/Header/Index";

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-interface Link {
+interface NavLink {
   link: string;
   name: string;
 }
 
 interface Props {
-  links: Link[];
+  links: NavLink[];
 }
 
 const Nav = ({ links }: Props) => {
