@@ -72,10 +72,14 @@ Stokrotka śniegu dobra myśl"
           ></Person>
         </div>
         <h1>Kontakt</h1>
-        <h1 className="h11">Adres Email</h1>
-        <input type="text" className="mail" />
-        <h1 className="h11">Co ciekawego chcesz napisac?</h1>
-        <textarea></textarea>
+        <h1 className="h11">Adres e-mail</h1>
+        <input type="text" placeholder="test@mail.com" className="mail" />
+        <h1 className="h11">Co ciekawego chcesz napisać?</h1>
+        <textarea
+          placeholder="Interista jest super"
+          className="mailTextarea"
+        ></textarea>
+        <button className="sendbutton">Wyślij!</button>
       </div>
       <Footer />
     </StyledContact>
@@ -86,7 +90,7 @@ export default Contact;
 
 const StyledContact = styled.div`
   footer {
-    margin-top: 85vw;
+    margin-top: 87vw;
   }
   font-family: "Bebas Neue";
   .persondiv {
@@ -140,12 +144,15 @@ const StyledContact = styled.div`
     height: 50px;
     background: rgba(0, 0, 0, 0.05);
     border: none;
-    padding: 5px;
+    padding: 15px;
     margin-bottom: 10px;
+    font-size: 18px;
   }
   textarea,
   input:focus {
     outline: none;
+    font-size: 18px;
+    padding: 17px;
   }
 
   .h11 {
@@ -162,5 +169,16 @@ const StyledContact = styled.div`
   .aboutp {
     margin-top: 35px;
     margin-bottom: 100px;
+  }
+  button {
+    margin-top: 18px;
+    width: 140px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    font-weight: 900;
+  }
+  button:active {
+    box-shadow: 2px 2px 5px #000000;
   }
 `;
