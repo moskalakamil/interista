@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@notionhq/client": "^2.2.5",
     "@prisma/client": "^4.11.0",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
@@ -24,15 +25,18 @@
     "eslint-config-next": "13.1.6",
     "i18next": "^22.4.12",
     "jest-environment-jsdom": "^29.4.3",
+    "markdown-to-jsx": "^7.2.0",
     "next": "13.1.6",
     "next-i18next": "^13.2.2",
     "next-superjson-plugin": "^0.5.6",
+    "notion-to-md": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^12.2.0",
     "styled-components": "^5.3.6",
     "superjson": "^1.12.2",
-    "typescript": "4.9.5"
+    "typescript": "4.9.5",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",

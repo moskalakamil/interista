@@ -1,29 +1,26 @@
-import { parseDate } from "@/utils/parseDate";
-import Image from "next/image";
+import { Article } from "@/types/article";
+import dayjs from "dayjs";
 import styled from "styled-components";
 
-interface Props {
-  name: string;
-  date: string;
-  tag: string;
-  id: string;
-}
+const Article = ({ title, createdAt, tags, id, avatarUrl }: Article) => {
+  const parsedDate = dayjs(createdAt).format("DD.MM.YYYY HH:mm");
+  const avatar = avatarUrl ?? `/articles/default.webp`;
 
-const Article = ({ name, date, tag, id }: Props) => {
   return (
     <Container>
       <div className="imageContainer">
-        <Image
-          src={`/articles/104e2a0a-9760-49ae-9848-c371fe2fbb6e/main.webp`}
-          alt=""
-          fill
-        />
+        <img src={avatar} alt="article image" height="220" width="350" />
       </div>
       <div className="additional-info">
-        <p className="tag">{tag}</p>
-        <p className="time">{date}</p>
+        {tags &&
+          tags.map(({ name, color }) => (
+            <Tag key={name} backgroundColor={color}>
+              {name}
+            </Tag>
+          ))}
+        <p className="time">{parsedDate}</p>
       </div>
-      <h1>{name}</h1>
+      <h1>{title}</h1>
     </Container>
   );
 };
@@ -41,12 +38,8 @@ const Container = styled.li`
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     padding-block: 5px;
-
-    .tag {
-      font-weight: 500;
-      color: ${({ theme }) => theme.colors.navyBlue};
-    }
 
     .time {
       font-weight: 300;
@@ -72,6 +65,14 @@ const Container = styled.li`
     width: 75vw;
     height: 1px;
   }
+`;
+
+const Tag = styled.p<{ backgroundColor: string }>`
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.navyBlue};
+  background-color: ${({ backgroundColor }) => backgroundColor || "white"};
+  padding: 5px;
+  border-radius: 3px;
 `;
 
 export default Article;

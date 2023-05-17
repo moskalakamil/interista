@@ -1,11 +1,11 @@
 import SectionTitle from "../../../common/SectionTitle";
 import styled from "styled-components";
 import Article from "./Article";
-import { Post } from "@/types/posts";
+import { Article as ArticleT } from "@/types/article";
 import { useTranslation } from "next-i18next";
 
 interface Props {
-  articles: Post[];
+  articles: ArticleT[];
 }
 
 const Articles = ({ articles }: Props) => {
@@ -16,13 +16,7 @@ const Articles = ({ articles }: Props) => {
       <SectionTitle>{t("articles")}</SectionTitle>
       <ul>
         {articles.map((article) => (
-          <Article
-            name={article.title}
-            date={article.createdAt}
-            tag="Gorący piłkayk"
-            id={article.id}
-            key={article.id}
-          />
+          <Article {...article} key={article.id} />
         ))}
       </ul>
     </Container>
