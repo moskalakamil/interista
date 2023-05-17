@@ -25,7 +25,9 @@ const Contact = () => {
       <SubpageTitle title="Kontakt & O nas"></SubpageTitle>
       <div className="about">czesc</div>
       <div className="whitediv">
-        <h1 className="abouttitle">Interista.pl</h1>
+        <h1 className="abouttitle" id="about">
+          Interista.pl
+        </h1>
         <p className="aboutp">
           Lorem ipsum adjsadbashjdbhsja dbshaudg usa ds vdsuagdfv gas vdsa
           vduyasg dhasdi hasig duasg diuasgd yisa digg dhasdi hasig duasg

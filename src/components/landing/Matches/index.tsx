@@ -28,7 +28,7 @@ const Matches = () => {
   ];
 
   return (
-    <section>
+    <section id="matches">
       <SectionTitle>{t("matches")}</SectionTitle>
       {matches.map(({ host, guest, date, hour }) => (
         <Match key={date} host={host} guest={guest} date={date} hour={hour} />

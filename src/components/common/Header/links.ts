@@ -1,14 +1,21 @@
-export const links = [
+export const leftLinks = [
   {
-    link: "first",
-    name: "first",
+    link: "#articles",
+    name: "Artykuły",
   },
   {
-    link: "second",
-    name: "second",
+    link: "#matches",
+    name: "Mecze",
+  },
+];
+
+export const rightLinks = [
+  {
+    link: "contact/#about",
+    name: "O Nas",
   },
   {
-    link: "third",
-    name: "third",
+    link: "contact/#contact",
+    name: "O Nas",
   },
 ];

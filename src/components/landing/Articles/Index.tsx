@@ -12,7 +12,7 @@ const Articles = ({ articles }: Props) => {
   const { t } = useTranslation("common");
 
   return (
-    <Container>
+    <Container id="articles">
       <SectionTitle>{t("articles")}</SectionTitle>
       <ul>
         {articles.map((article) => (
