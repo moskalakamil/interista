@@ -1,9 +1,8 @@
 import { Article } from "@/types/article";
-import dayjs from "dayjs";
+import { parseDate } from "@/utils/parseDate";
 import styled from "styled-components";
 
 const Article = ({ title, createdAt, tags, id, avatarUrl }: Article) => {
-  const parsedDate = dayjs(createdAt).format("DD.MM.YYYY HH:mm");
   const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
   return (
@@ -18,7 +17,7 @@ const Article = ({ title, createdAt, tags, id, avatarUrl }: Article) => {
               {name}
             </Tag>
           ))}
-        <p className="time">{parsedDate}</p>
+        <p className="time">{parseDate(new Date(createdAt))}</p>
       </div>
       <h1>{title}</h1>
     </Container>
