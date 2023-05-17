@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Author } from "@/types/article";
 
 const Author = ({ id, name, email, avatarUrl }: Author) => {
-  const avatar = avatarUrl ?? `/articles/default.webp`;
+  const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
   return (
     <StyledCategory>

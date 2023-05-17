@@ -5,7 +5,7 @@ import Markdown from "markdown-to-jsx";
 import { Article } from "@/types/article";
 
 const Main = ({ title, content, avatarUrl }: Article) => {
-  const avatar = avatarUrl ?? `/articles/default.webp`;
+  const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
   return (
     <MainStyled>

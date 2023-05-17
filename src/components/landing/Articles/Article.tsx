@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Article = ({ title, createdAt, tags, id, avatarUrl }: Article) => {
   const parsedDate = dayjs(createdAt).format("DD.MM.YYYY HH:mm");
-  const avatar = avatarUrl ?? `/articles/default.webp`;
+  const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
   return (
     <Container>

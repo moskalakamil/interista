@@ -24,7 +24,7 @@ export default function Home({ articles }: Props) {
 
       <main>
         <Header />
-        <Hero articleName="Lorem ipsum rata tata  sg" articleId={2} />
+        <Hero />
         <Articles articles={articles} />
         <Matches />
         <Footer />
