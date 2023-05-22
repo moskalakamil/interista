@@ -10,6 +10,11 @@ const GlobalStyles = createGlobalStyle`
   body {
     overflow-x: hidden;
   }
+
+  a {
+      text-decoration: none;
+      color: black;
+  }
 `;
 
 export default GlobalStyles;
