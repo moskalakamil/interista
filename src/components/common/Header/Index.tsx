@@ -1,10 +1,41 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
-import { links } from "./links";
 import Nav from "./Nav";
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Header = () => {
+  const { t } = useTranslation("common");
+
+  const leftLinks = useMemo(
+    () => [
+      {
+        link: "#articles",
+        name: t("articles"),
+      },
+      {
+        link: "#matches",
+        name: t("matches"),
+      },
+    ],
+    [t]
+  );
+
+  const rightLinks = useMemo(
+    () => [
+      {
+        link: "contact/#about",
+        name: t("about"),
+      },
+      {
+        link: "contact/#contact",
+        name: t("contact"),
+      },
+    ],
+    [t]
+  );
+
   const [isOnTop, setIsOnTop] = useState(true);
 
   const scrollHandler = () => {
@@ -19,15 +50,17 @@ const Header = () => {
 
   return (
     <StyledHeader data-testid="header" isOnTop={isOnTop}>
-      <Nav links={links} />
-      <Image
-        className="image"
-        src={`/logo_${isOnTop ? "white" : "black"}.svg`}
-        alt="Interista"
-        width={80}
-        height={80}
-      />
-      <Nav links={links} />
+      <Nav links={leftLinks} />
+      <Link href={"/"}>
+        <Image
+          className="image"
+          src={`/logo_${isOnTop ? "white" : "black"}.svg`}
+          alt="Interista"
+          width={80}
+          height={80}
+        />
+      </Link>
+      <Nav links={rightLinks} />
     </StyledHeader>
   );
 };
@@ -47,6 +80,15 @@ const StyledHeader = styled.header<StyledHeaderProps>`
   padding-top: ${({ isOnTop }) => (isOnTop ? 2 : 0)}vh;
   background: ${({ isOnTop }) => (isOnTop ? "transparent" : "white")};
   transition: all 0.1s ease-in-out;
+
+  .image {
+    cursor: pointer;
+    transition: transform 0.16s ease-in-out;
+
+    :hover {
+      transform: scale(0.9);
+    }
+  }
 
   a {
     color: ${({ isOnTop }) => (isOnTop ? "white" : "black")};
