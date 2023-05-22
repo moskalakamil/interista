@@ -16,6 +16,6 @@ export const rightLinks = [
   },
   {
     link: "contact/#contact",
-    name: "O Nas",
+    name: "Kontakt",
   },
 ];
