@@ -7,8 +7,8 @@ const Article = ({ title, createdAt, tags, id, avatarUrl }: Article) => {
   const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
   return (
-    <Link href={`/${id}`}>
-      <Container>
+    <Container>
+      <Link href={`/${id}`}>
         <div className="imageContainer">
           <img src={avatar} alt="article image" height="220" width="350" />
         </div>
@@ -22,8 +22,8 @@ const Article = ({ title, createdAt, tags, id, avatarUrl }: Article) => {
           <p className="time">{parseDate(new Date(createdAt))}</p>
         </div>
         <h1>{title}</h1>
-      </Container>
-    </Link>
+      </Link>
+    </Container>
   );
 };
 
@@ -42,10 +42,6 @@ const Container = styled.li`
     justify-content: space-between;
     align-items: center;
     padding-block: 5px;
-
-    a {
-      text-decoration: none;
-    }
 
     .time {
       font-weight: 300;
