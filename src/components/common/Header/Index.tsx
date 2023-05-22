@@ -1,11 +1,41 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
-import { leftLinks, rightLinks } from "./links";
 import Nav from "./Nav";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const Header = () => {
+  const { t } = useTranslation("common");
+
+  const leftLinks = useMemo(
+    () => [
+      {
+        link: "#articles",
+        name: t("articles"),
+      },
+      {
+        link: "#matches",
+        name: t("matches"),
+      },
+    ],
+    [t]
+  );
+
+  const rightLinks = useMemo(
+    () => [
+      {
+        link: "contact/#about",
+        name: t("about"),
+      },
+      {
+        link: "contact/#contact",
+        name: t("contact"),
+      },
+    ],
+    [t]
+  );
+
   const [isOnTop, setIsOnTop] = useState(true);
 
   const scrollHandler = () => {
