@@ -8,7 +8,9 @@ const Header = () => {
     <DivContainerStyled>
       <Link href={"/"}>Cofnij</Link>
       <DivImageStyled>
-        <Image src="/logo_black.svg" alt="logo" fill />
+        <Link href={"/"}>
+          <Image src="/logo_black.svg" alt="logo" fill />
+        </Link>
       </DivImageStyled>
     </DivContainerStyled>
   );
