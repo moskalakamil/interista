@@ -8,6 +8,14 @@ import { useTranslation } from "next-i18next";
 const Header = () => {
   const { t } = useTranslation("common");
 
+  const [isOnTop, setIsOnTop] = useState(true);
+
+  useEffect(() => {
+    addEventListener("scroll", scrollHandler);
+
+    return () => removeEventListener("scroll", scrollHandler);
+  }, []);
+
   const leftLinks = useMemo(
     () => [
       {
@@ -36,17 +44,9 @@ const Header = () => {
     [t]
   );
 
-  const [isOnTop, setIsOnTop] = useState(true);
-
   const scrollHandler = () => {
     setIsOnTop(window.scrollY <= 0);
   };
-
-  useEffect(() => {
-    addEventListener("scroll", scrollHandler);
-
-    return () => removeEventListener("scroll", scrollHandler);
-  }, []);
 
   return (
     <StyledHeader data-testid="header" isOnTop={isOnTop}>
@@ -74,9 +74,10 @@ const StyledHeader = styled.header<StyledHeaderProps>`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
   width: 100%;
   align-items: center;
-  z-index: 1024;
+  z-index: 2137;
   padding-top: ${({ isOnTop }) => (isOnTop ? 2 : 0)}vh;
   background: ${({ isOnTop }) => (isOnTop ? "transparent" : "white")};
   transition: all 0.1s ease-in-out;
