@@ -13,7 +13,5 @@ export const getAllPublishedArticles = async () => {
     parsedResult.push(parseData(post));
   });
 
-  console.log(parsedResult[0]);
-
   return parsedResult;
 };

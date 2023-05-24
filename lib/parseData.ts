@@ -84,7 +84,6 @@ export const parseData = (post: GetPageResponse): Article => {
     const { id, properties, created_time, last_edited_time, cover } =
       parsedData;
     const { Author, Title, Tags } = properties;
-    console.warn(Tags);
 
     return {
       id: id,
