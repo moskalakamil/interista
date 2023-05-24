@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
 const Header = () => {
   return (
     <DivContainerStyled>
-      <p>cofnij se</p>
+      <Link href={"/"}>Cofnij</Link>
       <DivImageStyled>
         <Image src="/logo_black.svg" alt="logo" fill />
       </DivImageStyled>

@@ -4,13 +4,11 @@ import Head from "next/head";
 import Header from "@/components/common/Header/Index";
 import Hero from "@/components/landing/Hero/Index";
 import Footer from "@/components/common/Footer/Index";
-import { Post } from "@/types/posts";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { getStaticPaths } from "./[ArticleId]";
-import { getPosts } from "./api/post/getPosts";
+import { Article } from "@/types/article";
+import { getAllPublishedArticles } from "./../../lib/getAllPublishedArticles";
 
 interface Props {
-  articles: Post[];
+  articles: Article[];
 }
 
 export default function Home({ articles }: Props) {
@@ -26,7 +24,7 @@ export default function Home({ articles }: Props) {
 
       <main>
         <Header />
-        <Hero articleName="Lorem ipsum rata tata  sg" articleId={2} />
+        <Hero />
         <Articles articles={articles} />
         <Matches />
         <Footer />
@@ -35,10 +33,13 @@ export default function Home({ articles }: Props) {
   );
 }
 
-export const getStaticProps = async ({ locale }: any) => {
-  const articles = await getPosts();
+export const getStaticProps = async () => {
+  const articles = await getAllPublishedArticles();
 
   return {
-    props: { articles, ...(await serverSideTranslations(locale, ["common"])) },
+    props: {
+      articles,
+    },
+    revalidate: 1,
   };
 };

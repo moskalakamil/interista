@@ -1,11 +1,11 @@
-import ArticleItem from "@/types/ArticleItem";
+import { Article } from "@/types/article";
 import styled from "styled-components";
 
-const RecommendedArticle = ({ title, description }: ArticleItem) => {
+const RecommendedArticle = ({ title, content }: Article) => {
   return (
     <StyledRecommendedArticle>
       <h3>{title}</h3>
-      <p>{description}</p>
+      <p>{content}</p>
     </StyledRecommendedArticle>
   );
 };

@@ -6,25 +6,6 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
-
-model Post {
-  id        String @default(uuid()) @id
-  title     String
-  content   String
-  published Boolean @default(false)
-  author    User   @relation(fields: [authorId], references: [id]) 
-  authorId  String
-  createdAt String
-  updatedAt String
-  @@map("posts")
-}
-
 model User {
   id            String @default(uuid()) @id
-  name          String
-  email         String @unique
-  createdAt     String
-  updatedAt     String
-  posts         Post[]
-  @@map("users")
 }

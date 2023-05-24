@@ -1,29 +1,22 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
+import { Author } from "@/types/article";
 
-interface Props {
-  author: {
-    id: string;
-    name: string;
-    email: string;
-  };
-}
+const Author = ({ id, name, email, avatarUrl }: Author) => {
+  const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
-const Author = ({ author }: Props) => {
-  const { id, name, email } = author;
   return (
     <StyledCategory>
-      <Image
+      <img
         className="profileImage"
-        src="/footer.png"
+        src={avatar}
         alt="profile"
         width={70}
         height={70}
       />
       <div>
         <h1>{name}</h1>
-        <p>Autor/ka</p>
       </div>
     </StyledCategory>
   );

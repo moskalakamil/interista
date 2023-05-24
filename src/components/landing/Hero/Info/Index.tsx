@@ -1,15 +1,11 @@
 import styled from "styled-components";
 
-interface Props {
-  articleName: string;
-}
-
-const Info = ({ articleName }: Props) => {
+const Info = () => {
   return (
     <Container>
       <h2>ARTICLE</h2>
       <div className="article-info">
-        <h1>{articleName}</h1>
+        <h1>Poznaj najnowsze informacje!</h1>
         <button>SEE MORE</button>
       </div>
     </Container>

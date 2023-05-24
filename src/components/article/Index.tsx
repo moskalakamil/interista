@@ -1,23 +1,21 @@
-import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import Markdown from "markdown-to-jsx";
+import { Article } from "@/types/article";
 
-interface IProps {
-  title: string;
-  description: string;
-}
+const Main = ({ title, content, avatarUrl }: Article) => {
+  const avatar = avatarUrl ?? `/articles/default.jpeg`;
 
-const Main = ({ title, description }: IProps) => {
   return (
     <MainStyled>
       <Header />
       <h1>{title}</h1>
       <div className="articleImage">
-        <Image src="/footer.png" alt="article image" fill />
+        <img src={avatar} alt="article image" />
       </div>
-      <p className="header">Naglowek</p>
-      <p>{description}</p>
+      <p className="header">Nagłówek</p>
+      <Markdown>{content}</Markdown>
     </MainStyled>
   );
 };
