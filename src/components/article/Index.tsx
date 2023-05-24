@@ -14,7 +14,6 @@ const Main = ({ title, content, avatarUrl }: Article) => {
       <div className="articleImage">
         <img src={avatar} alt="article image" />
       </div>
-      <p className="header">Nagłówek</p>
       <Markdown>{content}</Markdown>
     </MainStyled>
   );
