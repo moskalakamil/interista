@@ -26,10 +26,13 @@ const Articles = ({ articles }: Props) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 20px;
 
   ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    /* grid-gap: 10px; */
     border-width: 2px 0 0 2px;
   }
 `;
