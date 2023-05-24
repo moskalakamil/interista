@@ -32,7 +32,7 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-items: center;
-    /* grid-gap: 10px; */
+    grid-gap: 10px;
     border-width: 2px 0 0 2px;
   }
 `;

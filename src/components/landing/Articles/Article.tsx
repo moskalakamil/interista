@@ -31,7 +31,6 @@ const Container = styled.li`
   display: flex;
   flex-direction: column;
   width: 350px;
-  padding-inline: 20px;
   box-sizing: content-box;
   margin-inline: auto;
   margin-bottom: 5vw;
